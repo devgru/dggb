@@ -1,0 +1,7 @@
+*.css
+.idea
+target
+out
+.classpath
+.project
+.settings
