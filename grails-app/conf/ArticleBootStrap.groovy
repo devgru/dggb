@@ -1,4 +1,5 @@
 import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import ru.devg.dggb.ArticleCrawler
 
 class ArticleBootStrap {
 
@@ -6,10 +7,8 @@ class ArticleBootStrap {
 
     def init = {servletContext ->
 
-        File categories = new File(ConfigurationHolder.config.dggb.articles.home)
-
-        println categories.listFiles()
-
+        articleService.sayHello()
+        new ArticleCrawler().initialCrawl() 
     }
     def destroy = {
     }

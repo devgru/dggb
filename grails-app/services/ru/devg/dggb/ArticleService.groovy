@@ -2,7 +2,7 @@ package ru.devg.dggb
 
 class ArticleService {
 
-    boolean transactional = true
+    boolean transactional = false
 
     def sayHello() {
         println 'hello'
