@@ -1,4 +1,3 @@
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
 import ru.devg.dggb.ArticleCrawler
 
 class ArticleBootStrap {
