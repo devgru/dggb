@@ -1,5 +1,7 @@
 package ru.devg.dggb
 
+import org.codehaus.groovy.grails.commons.ConfigurationHolder
+
 class ArticleCrawler {
 
     def initialCrawl = {
