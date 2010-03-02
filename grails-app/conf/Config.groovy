@@ -45,7 +45,7 @@ grails.spring.bean.packages = []
 // set per-environment serverURL stem for creating absolute links
 environments {
     production {
-        grails.serverURL = "http://www.changeme.com"
+        grails.serverURL = "http://gb.devg.ru/"
     }
     development {
         grails.serverURL = "http://localhost:8080/"
@@ -81,4 +81,14 @@ log4j = {
     warn 'org.mortbay.log'
 }
 
-dggb.articles.home='articles'
+environments {
+    production {
+        dggb.articles.home='/home/jetty/articles'
+    }
+    development {
+        dggb.articles.home='articles'
+    }
+    test {
+        dggb.articles.home='articles'
+    }
+}
