@@ -1,13 +1,12 @@
-import ru.devg.dggb.ArticleCrawler
-
 class ArticleBootStrap {
 
     def articleService
+    def crawlerService
 
     def init = {servletContext ->
 
-        articleService.sayHello()
-        new ArticleCrawler().initialCrawl() 
+        crawlerService.initialCrawl()
+
     }
     def destroy = {
     }
