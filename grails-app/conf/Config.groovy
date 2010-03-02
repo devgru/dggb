@@ -80,3 +80,5 @@ log4j = {
 
     warn 'org.mortbay.log'
 }
+
+dggb.articles.home='articles'

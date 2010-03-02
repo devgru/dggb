@@ -3,7 +3,7 @@ package ru.devg.dggb
 class ArticleCrawler {
 
     def initialCrawl = {
-        File articlesHome = new File('articles')
+        File articlesHome = new File(ConfigurationHolder.config.dggb.articles.home)
 
         articlesHome.listFiles().grep {it.isDirectory()}.each {crawlCategory it}
     }
