@@ -1,3 +1,6 @@
 [submodule "web-app/css"]
 	path = web-app/css
 	url = http://github.com/devgru/common-less-css.git
+[submodule "web-app/css/lib"]
+	path = web-app/css/lib
+	url = http://github.com/devgru/common-less-css.git
