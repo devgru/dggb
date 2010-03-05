@@ -10,7 +10,7 @@
          </hgroup>
      </header>
     <div id="console-breadcrumb">
-        <span class="blue"><a href="#">~/</a><a href="#">java/</a>dggb</span>$ 
+        <span class="blue"><a href="#">~</a>/<a href="#">java</a>/dggb</span>$ 
     </div>
 </body>
 </html>
