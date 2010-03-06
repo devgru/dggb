@@ -6,31 +6,40 @@ class CrawlerService {
 
     boolean transactional = false
 
-    def initialCrawl = {
+    def initialCrawl() {
         File articlesHome = CH.config.dggb.articles.home as File
 
-        articlesHome.eachDir {crawlDirectory it, Directory.root}
+        articlesHome.eachDir {File file -> crawlDirectory file, Directory.root}
     }
 
-    static def crawlDirectory = {
-        File directoryFile, Directory parent ->
+    static def crawlDirectory(File directoryFile, Directory parent) {
 
         File desc = new File(directoryFile.getAbsolutePath() + '/desc')
-        Map<String, String> properties = crawlPropertiesFromFile(desc)
 
-        Directory directory = new Directory(properties, [], parent)
+        Directory directory = new Directory(crawlPropertiesFromFile(desc), parent)
 
         directoryFile.eachFile {
             if (it.isDirectory())
                 crawlDirectory it, directory
             else
-                crawlPage it, directory
+                if(it.getName() != "desc")
+                    crawlPage it, directory     
         }
 
+        println directory
+        return directory
     }
 
-    static def crawlPropertiesFromFile = {
-        File file ->
+    static def crawlPage(File pageFile, Directory directory) {
+
+        def properties = crawlPropertiesFromFile(pageFile)
+        def page = new Page(properties, directory)
+
+        println page
+        return page
+    }
+
+    static def crawlPropertiesFromFile(File file) {
 
         StringBuilder text = new StringBuilder()
         Map<String, String> properties = new HashMap<String, String>()
@@ -54,15 +63,11 @@ class CrawlerService {
             }
         }
 
+        properties['File'] = file
         properties['Text'] = text.toString()
 
         return properties
 
     }
 
-    static def crawlPage = {
-        File pageFile, Directory directory ->
-
-
-    }
 }
