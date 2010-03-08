@@ -83,12 +83,12 @@ log4j = {
 
 environments {
     production {
-        dggb.articles.home='/home/jetty/articles'
+        dggb.pages.home='/home/jetty/pages'
     }
     development {
-        dggb.articles.home='articles'
+        dggb.pages.home='pages'
     }
     test {
-        dggb.articles.home='articles'
+        dggb.pages.home='pages'
     }
 }

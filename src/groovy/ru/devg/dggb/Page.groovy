@@ -1,14 +1,12 @@
 package ru.devg.dggb
 
-class Page {
+class Page extends Entry {
 
-    final Map<String, String> properties
-    final Directory parent
+    Page(File file, Map<String, String> properties, Directory parent) {
+        super(file, properties, parent)
 
-    def Page(Map<String, String> properties, Directory parent) {
-
-        this.properties = properties;
-        this.parent = parent;
-        parent.pages += this
+        parent.pages.add this
+        parent.children.add this
+        EntryStorage.addEntry this
     }
 }

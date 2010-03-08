@@ -1,12 +1,15 @@
 class UrlMappings {
     static mappings = {
-        "/$controller/$id?" (action: 'index')
 
-         "/$page"(action: 'index', controller: 'main')
+        "/$page"(action: 'index', controller: 'main')
+        "/articles/*"(action: 'index', controller: 'main')
+        "/articles/*/*"(action: 'index', controller: 'main')
 
-        "/"(view: "/index")
+        "/$controller/$id?"(action: 'index')
+
+        "/"(view: '/index')
         "500"(view: '/error')
-        "404"(view: '/error')
+        "404"(controller: 'main')
 
     }
 }

@@ -6,12 +6,13 @@ html {
     font-size: 100%;
     background: #888;
     height: 100%;
+    font-family: Georgia, serif;
 }
 
 body {
     background: white url(/images/m.png) center top repeat;
     font-size: 1.25em;
-    width: 780px;
+    width: 700px;
     margin: 0 auto;
     min-height: 100%;
 }
@@ -20,35 +21,25 @@ body {
     height: 100%;
 }
 
-#main-header {
+.console {
     .center-block;
+    .console-like-block;
 
-    background: white;
-    /*.custom-rounded-corners(0, 0, 20px, 20px);*/
+    padding-bottom: 1.25em;
+}
+
+#main-header {
+    .console;
+    padding-top: 1.25em;
+    padding-bottom: 0;
     overflow: hidden;
 
     h1 {
-        text-align: center;
         font-size: 4em;
-        margin-top: 0.25em;
+        margin-bottom: 0.16em;
     }
 
     h2 {
-        font-size: 0.8em;
-        text-align: center;
-        color: #777;
-        margin: 0.5em 0 1em;
+        margin-bottom: 0.64em;
     }
-
-}
-
-#console-breadcrumb {
-    .center-block;
-    .console-colors;
-
-    font-weight: bold;
-    font-family: Terminus, 'Monospace', monospace;
-    font-size: 0.8em;
-
-    padding: .75em 1em;
 }

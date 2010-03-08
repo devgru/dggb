@@ -2,10 +2,26 @@ package ru.devg.dggb
 
 class MainController {
 
-    def uri
+    String currentDirectory
+    Entry entry
+
+    def entryService
+    def urlService
 
     def index = {
-        uri = request.forwardURI
-        
+        def url = urlService.getUrl()
+        entry = entryService.getEntry(url)
+
+        // todo remove inspection deprecation:
+        //noinspection GroovyEmptyStatementBody
+        if (entry instanceof Directory) {
+            currentDirectory = entry.url.replaceFirst('/', '')
+            render(view: 'directory')
+        } else if (entry instanceof Page) {
+            currentDirectory = entry.parent.url.replaceFirst('/', '')
+            render(view: 'page')
+        } else {
+            render(view: '/error', status: 404)
+        }
     }
 }

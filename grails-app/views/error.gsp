@@ -1,6 +1,7 @@
 <html>
   <head>
-	  <title>Grails Runtime Exception</title>
+	  <title>Ошибочка вышла</title>
+      <meta name="layout" content="main">
 	  <style type="text/css">
 	  		.message {
 	  			border: 1px solid black;
@@ -24,13 +25,8 @@
   </head>
 
   <body>
-    <h1>Grails Runtime Exception</h1>
-    <h2>Error Details</h2>
-
   	<div class="message">
 		<strong>Error ${request.'javax.servlet.error.status_code'}:</strong> ${request.'javax.servlet.error.message'.encodeAsHTML()}<br/>
-		<strong>Servlet:</strong> ${request.'javax.servlet.error.servlet_name'}<br/>
-		<strong>URI:</strong> ${request.'javax.servlet.error.request_uri'}<br/>
 		<g:if test="${exception}">
 	  		<strong>Exception Message:</strong> ${exception.message?.encodeAsHTML()} <br />
 	  		<strong>Caused by:</strong> ${exception.cause?.message?.encodeAsHTML()} <br />

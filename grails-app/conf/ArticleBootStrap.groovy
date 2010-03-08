@@ -1,6 +1,5 @@
 class ArticleBootStrap {
 
-    def articleService
     def crawlerService
 
     def init = {servletContext ->
