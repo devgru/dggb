@@ -2,20 +2,23 @@ package ru.devg.dggb
 
 import org.codehaus.groovy.grails.commons.ConfigurationHolder as CH
 
-class Entry implements Comparable<Entry>{
+class Entry implements Comparable<Entry> {
     final Map<String, String> properties
     final Directory parent
     final File file
     final String url
+    Date updateDate
 
-    Entry(file, properties, parent) {
+    Entry(File file, Map<String, String> properties, Directory parent) {
         this.file = file;
         this.properties = properties;
         this.parent = parent;
 
+        updateDate = new Date(file.lastModified())
+
         String url = file.absolutePath
         File home = (CH.config.dggb.pages.home as File)
-        url = url.replace(home.absolutePath,'')
+        url = url.replace(home.absolutePath, '')
         this.url = url
     }
 
@@ -23,7 +26,7 @@ class Entry implements Comparable<Entry>{
         return "Entry $file"
     }
 
-    String getName(){
+    String getName() {
         return file.name
     }
 
@@ -31,7 +34,7 @@ class Entry implements Comparable<Entry>{
         return name.compareTo(o.name)
     }
 
-    def int hashCode() {
+    int hashCode() {
         return name.hashCode()
     }
 

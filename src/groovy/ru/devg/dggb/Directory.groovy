@@ -5,7 +5,6 @@ import org.codehaus.groovy.grails.commons.ConfigurationHolder as CH
 
 class Directory extends Entry {
 
-    static final Map<String, Directory> directories = new HashMap<String, Directory>()
     static final Directory root = new Directory((CH.config.dggb.pages.home as File), [:], null)
 
     final Set<Page> pages = []
