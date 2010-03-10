@@ -6,14 +6,38 @@ class CrawlerService {
 
     boolean transactional = false
 
-    def initialCrawl() {
-        File articlesHome = CH.config.dggb.pages.home as File
+    static final File pagesHome = CH.config.dggb.pages.home as File   
 
-        articlesHome.eachDir {file -> crawlDirectory file, Directory.root}
+    def initialCrawl() {
+        pagesHome.eachDir {file -> crawlDirectory file, Directory.root}
+    }
+
+    def recrawl() {
+        log.trace 'recrawling'
+        log.trace EntryStorage.entries.size() + ' entries'
+        remove()
+        update()
+        create()
+        log.trace EntryStorage.entries.size() + ' entries'
+    }
+
+    def remove() {
+        EntryStorage.entries.values().grep { !it.file.exists() }.each {
+            log.trace "removing $it"
+            it.parent.children - it
+            EntryStorage.entries.remove it.url
+        }
+    }
+
+    def update() {
+    }
+
+    def create() {
+        pagesHome.eachDir {file -> crawlDirectory file, Directory.root}
     }
 
     static def crawlDirectory(File directoryFile, Directory parent) {
-        File desc = new File(directoryFile.getAbsolutePath() + '/desc')
+        File desc = (directoryFile.getAbsolutePath() + '/desc') as File
 
         def directory = new Directory(directoryFile, crawlPropertiesFromFile(desc), parent)
 

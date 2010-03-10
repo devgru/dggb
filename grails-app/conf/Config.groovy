@@ -79,6 +79,16 @@ log4j = {
             'net.sf.ehcache.hibernate'
 
     warn 'org.mortbay.log'
+
+    trace 'grails.app.task', //quartz
+            'grails.app.service',
+            'grails.app.controller'
+
+    appenders {
+        console name: 'stdout', layout: pattern(conversionPattern: '%c{2} %m%n')
+    }
+
+
 }
 
 environments {
