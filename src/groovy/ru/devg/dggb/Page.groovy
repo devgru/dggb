@@ -6,7 +6,6 @@ class Page extends Entry {
         super(file, properties, parent)
 
         parent.pages.add this
-        parent.children.add this
         EntryStorage.addEntry this
     }
 }
