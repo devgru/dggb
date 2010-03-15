@@ -6,57 +6,31 @@ class CrawlerService {
 
     boolean transactional = false
 
-    static final File pagesHome = CH.config.dggb.pages.home as File   
+    EntryStorage preparing = new EntryStorage()
 
-    def initialCrawl() {
+    static final File pagesHome = CH.config.dggb.pages.home as File
+
+    synchronized def crawl() {
+        preparing = new EntryStorage()
         pagesHome.eachDir {file -> crawlDirectory file, Directory.root}
+        EntryService.currentStorage = preparing
+        preparing = null
     }
 
-    def recrawl() {
-        log.trace 'recrawling'
-        log.trace EntryStorage.entries.size() + ' entries'
-        remove()
-        update()
-        create()
-        log.trace EntryStorage.entries.size() + ' entries'
-    }
-
-    def remove() {
-        EntryStorage.entries.values().grep { !it.file.exists() }.each {
-            log.trace "removing $it"
-            it.parent.children - it
-            EntryStorage.entries.remove it.url
-        }
-    }
-
-    def update() {
-    }
-
-    def create() {
-        pagesHome.eachDir {file -> crawlDirectory file, Directory.root}
-    }
-
-    static def crawlDirectory(File directoryFile, Directory parent) {
+    def crawlDirectory(File directoryFile, Directory parent) {
         File desc = (directoryFile.getAbsolutePath() + '/desc') as File
 
-        def directory = new Directory(directoryFile, crawlPropertiesFromFile(desc), parent)
+        def directory = preparing.newDirectory(directoryFile, crawlPropertiesFromFile(desc), parent)
 
         directoryFile.eachFile {
             if (it.isDirectory())
                 crawlDirectory it, directory
             else
                 if (it.getName() != "desc")
-                    crawlPage it, directory
+                    preparing.newPage(it, crawlPropertiesFromFile(it), directory)
         }
 
         return directory
-    }
-
-    static def crawlPage(File pageFile, Directory directory) {
-        def properties = crawlPropertiesFromFile(pageFile)
-        def page = new Page(pageFile, properties, directory)
-
-        return page
     }
 
     static def crawlPropertiesFromFile(File file) {

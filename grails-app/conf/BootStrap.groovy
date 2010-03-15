@@ -3,10 +3,9 @@ class BootStrap {
     def crawlerService
 
     def init = {servletContext ->
-
-        crawlerService.initialCrawl()
-
+        crawlerService.crawl()
     }
+
     def destroy = {
     }
 }

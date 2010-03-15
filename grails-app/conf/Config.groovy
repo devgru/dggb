@@ -99,6 +99,6 @@ environments {
         dggb.pages.home='pages'
     }
     test {
-        dggb.pages.home='pages'
+        dggb.pages.home='test-pages'
     }
 }

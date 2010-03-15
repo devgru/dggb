@@ -4,7 +4,9 @@ class EntryService {
 
     boolean transactional = false
 
+    static EntryStorage currentStorage
+
     def getEntry(String url) {
-        return EntryStorage.entries[url]
+        return currentStorage?.entries[url]
     }
 }

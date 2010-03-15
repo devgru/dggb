@@ -13,7 +13,6 @@ class Directory extends Entry {
     Directory(File file, Map<String, String> properties, Directory parent) {
         super(file, properties, parent)
         if (parent) parent.subdirs.add this
-        EntryStorage.addEntry this
     }
 
     String toString() {
