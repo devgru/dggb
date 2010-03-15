@@ -13,14 +13,8 @@ class UrlService {
     String getUrl(attrs) {
         String url = attrs['url']
         if(url == null) {
-            return getUrl()
+            url = getRawUrl()
         }
-        url = removeTrailingSlash(url)
-        return url
-    }
-
-    String getUrl() {
-        String url = getRawUrl()
         url = removeTrailingSlash(url)
         return url
     }

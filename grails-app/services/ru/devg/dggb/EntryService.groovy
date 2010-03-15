@@ -6,7 +6,7 @@ class EntryService {
 
     static EntryStorage currentStorage
 
-    def getEntry(String url) {
+    Entry getEntry(String url) {
         return currentStorage?.entries[url]
     }
 }

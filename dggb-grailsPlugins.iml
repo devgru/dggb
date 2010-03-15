@@ -19,6 +19,11 @@
     <content url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/jetty-1.2-SNAPSHOT">
       <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/jetty-1.2-SNAPSHOT/src/groovy" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2">
+      <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/grails-app/services" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="grails-1.2.0" level="application" />
@@ -26,10 +31,12 @@
       <library name="Grails User Library">
         <CLASSES>
           <root url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/feeds-1.5/lib" />
+          <root url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/feeds-1.5/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>
