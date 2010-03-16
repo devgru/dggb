@@ -1,3 +1,6 @@
 [submodule "web-app/css/lib"]
 	path = web-app/css/lib
 	url = http://github.com/devgru/common-less-css.git
+[submodule "pages"]
+	path = pages
+	url = d-top.local:/home/devgru/pages/
