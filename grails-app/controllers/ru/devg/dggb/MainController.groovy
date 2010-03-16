@@ -12,8 +12,6 @@ class MainController {
         def url = urlService.getUrl()
         entry = entryService.getEntry(url)
 
-        // todo remove inspection deprecation:
-        //noinspection GroovyEmptyStatementBody
         if (entry instanceof Directory) {
             currentDirectory = entry.url.replaceFirst('/', '')
             render(view: 'directory')
