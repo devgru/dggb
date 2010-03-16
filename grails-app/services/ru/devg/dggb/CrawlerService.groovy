@@ -14,10 +14,12 @@ class CrawlerService {
         preparing = new EntryStorage()
         pagesHome.eachDir {file -> crawlDirectory file, Directory.root}
         EntryService.currentStorage = preparing
+        log.trace "crawled ${preparing.entries.size()} entries"
         preparing = null
     }
 
     def crawlDirectory(File directoryFile, Directory parent) {
+        if(directoryFile.name[0] == '.') return
         File desc = (directoryFile.getAbsolutePath() + '/desc') as File
 
         def directory = preparing.newDirectory(directoryFile, crawlPropertiesFromFile(desc), parent)
@@ -43,14 +45,16 @@ class CrawlerService {
 
             if (line.empty) {
                 rawText = true;
-            }else if (rawText) {
+            } else if (rawText) {
                 text.append line
             } else {
                 List<String> strings = line.tokenize(':').collect {it.trim()}
+
+                String key = transformKey(strings[0])
                 if (strings.size() == 2) {
-                    properties[strings[0]] = strings[1]
+                    properties[key] = strings[1]
                 } else if (strings.size() == 1) {
-                    properties[strings[0]] = true
+                    properties[key] = true
                 } else {
                     throw new IllegalArgumentException("something unparseable @ $file: “${line}”");
                 }
@@ -62,6 +66,21 @@ class CrawlerService {
 
         return properties
 
+    }
+
+    static def transformKey(String key) {
+        switch (key) {
+            case 'Заголовок':
+                return 'Title'
+            case 'Дата':
+                return 'Date'
+            case 'Черновик':
+                return 'Draft'
+            case 'Теги':
+                return 'Tags'
+            default:
+                return key
+        }
     }
 
 }
