@@ -10,13 +10,17 @@ class UrlService {
         RCH.getRequestAttributes().getRequest().forwardURI
     }
 
+    String getUrl() {
+        return removeTrailingSlash(getRawUrl())
+    }
     String getUrl(attrs) {
-        String url = attrs['url']
-        if(url == null) {
+        String url
+        if(attrs == null || attrs['url'] == null) {
             url = getRawUrl()
+        } else {
+            url = attrs['url']
         }
-        url = removeTrailingSlash(url)
-        return url
+        return removeTrailingSlash(url)
     }
 
     private String removeTrailingSlash(String url) {
