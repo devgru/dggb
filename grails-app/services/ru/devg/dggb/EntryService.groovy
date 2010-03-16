@@ -7,6 +7,6 @@ class EntryService {
     static EntryStorage currentStorage
 
     Entry getEntry(String url) {
-        return currentStorage?.entries[url]
+        return currentStorage?.entries?.get(url)
     }
 }
