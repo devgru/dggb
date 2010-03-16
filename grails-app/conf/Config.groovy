@@ -93,7 +93,7 @@ log4j = {
 
 environments {
     production {
-        dggb.pages.home='/home/jetty/pages'
+        dggb.pages.home='/home/devgru/pages'
     }
     development {
         dggb.pages.home='pages'
