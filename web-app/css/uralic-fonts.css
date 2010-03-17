@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Chancery Bookman';
+    src: url('/fonts/uralic/bookman.eot');
+    src: url('/fonts/uralic/bookman.ttf') format ("truetype");
+}
+
+@font-face {
+    font-family: 'Chancery Bookman';
+    src: url('/fonts/uralic/bookman-bold.eot');
+    src: url('/fonts/uralic/bookman-bold.ttf') format ("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Chancery Bookman';
+    src: url('/fonts/uralic/bookman-italic.eot');
+    src: url('/fonts/uralic/bookman-italic.ttf') format ("truetype");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Chancery Uralic';
+    src: url('/fonts/uralic/chancery.eot');
+    src: url('/fonts/uralic/chancery.ttf') format ("truetype");
+    font-style: italic;
+}
+
+/*
+gothic-bold.ttf
+gothic.ttf
+mono.ttf
+palladio-bold.ttf
+palladio-italic.ttf
+palladio.ttf
+roman-bold.ttf
+roman-italic.ttf
+roman.ttf
+sans-bold-italic.ttf
+sans-bold.ttf
+sans-condensed-bold.ttf
+sans-condensed.ttf
+sans-italic.ttf
+sans.ttf
+school-bold.ttf
+school-italic.ttf
+school.ttf
+*/
