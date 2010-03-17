@@ -1,5 +1,5 @@
 class UrlMappings {
-     static excludes = ["/images/*", "/css/**", "/WEB-INF/*"]
+    static excludes = ["/images/*", "/css/*", "/fonts/*", "/WEB-INF/*", "js/*"]
 
     static mappings = {
 
