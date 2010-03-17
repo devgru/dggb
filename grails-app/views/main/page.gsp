@@ -7,12 +7,12 @@
     <dggb:breadcrumbs url=""/> cd ${currentDirectory}<br/>
     <dggb:breadcrumbs url="${entry.parent.url}" /> cat ${entry.name}<br/>
 </div>
-<section class="hentry article-block">
+<article class="hentry article-block">
     <header></header>
-    <article>
+    <section>
         <dggb:entryText/>
-    </article>
+    </section>
     <footer></footer>
-</section>
+</article>
 </body>
 </html>
