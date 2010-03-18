@@ -12,7 +12,7 @@ class CrawlerService {
 
     synchronized def crawl() {
         preparing = new EntryStorage()
-        pagesHome.eachDir {file -> crawlDirectory file, Directory.root}
+        crawlDirectory(pagesHome, Directory.root)
         EntryService.currentStorage = preparing
         log.trace "crawled ${preparing.entries.size()} entries"
         preparing = null

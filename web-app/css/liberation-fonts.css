@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('/fonts/liberation/mono.eot');
+    src: url('/fonts/liberation/mono.ttf') format ("truetype");
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('/fonts/liberation/mono-bold.eot');
+    src: url('/fonts/liberation/mono-bold.ttf') format ("truetype");
+    font-weight: bold;
+}

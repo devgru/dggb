@@ -3,7 +3,7 @@
 @import url('globals.less');
 
 html {
-    font-size: 125%;
+    font-size: 100%;
     background: #888;
     height: 100%;
     font-family: Georgia, serif;
@@ -11,7 +11,7 @@ html {
 
 body {
     background: white url(/images/m.png) center top repeat;
-    width: 960px;
+    width: 800px;
     margin: 0 auto;
     min-height: 100%;
 }
@@ -29,7 +29,7 @@ body {
 
 #main-header {
     .console;
-    padding-top: .5em;
+    padding-top: 1em;
     padding-bottom: 1em;
     overflow: hidden;
 
@@ -44,22 +44,24 @@ body {
 }
 
 body > article {
-    background: white;
-    padding: 0 1em;
+    margin: 0 1em;
     width: 60%;
 
     > section {
         margin: 1em 0 2em;
 
         > p, > li, > dd {
-            font-size: .8em;
             text-align: justify;
             margin-bottom: 1em;
         }
+
         > aside {
+            font: italic 2em 'Chancery Uralic';
             float: right;
-            margin-right: -70%;
-            width: 60%;
+            margin-right: -60%;
+            width: 55%;
+            color: #666; 
+            .text-shadow(0, 0, .1em, #fff);
         }
     }
 }
