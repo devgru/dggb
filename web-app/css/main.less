@@ -3,7 +3,7 @@
 @import url('globals.less');
 
 html {
-    font-size: 100%;
+    font-size: 16px;
     background: #888;
     height: 100%;
     font-family: Georgia, serif;
@@ -11,7 +11,8 @@ html {
 
 body {
     background: white url(/images/m.png) center top repeat;
-    width: 800px;
+    width: 52em;
+    padding: 0 1em;
     margin: 0 auto;
     min-height: 100%;
 }
@@ -53,10 +54,11 @@ body > article {
         > p, > li, > dd {
             text-align: justify;
             margin-bottom: 1em;
+	    line-height: 1.5em;
         }
 
         > aside {
-            font: italic 2em 'Chancery Uralic';
+            font: italic 1.5em 'Chancery Uralic';
             float: right;
             margin-right: -60%;
             width: 55%;
