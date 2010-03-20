@@ -6,4 +6,6 @@ class Page extends Entry {
         super(file, properties, parent)
         parent.pages.add this
     }
+
+
 }

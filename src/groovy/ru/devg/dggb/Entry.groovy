@@ -23,7 +23,7 @@ class Entry implements Comparable<Entry> {
     }
 
     String toString() {
-        return "Entry $file"
+        return "Entry $file $properties"
     }
 
     String getName() {

@@ -28,7 +28,7 @@ class CrawlerService {
             if (it.isDirectory())
                 crawlDirectory it, directory
             else
-                if (it.getName() != "desc")
+                if (it.name != "desc" && !it.name.contains('.'))
                     preparing.newPage(it, crawlPropertiesFromFile(it), directory)
         }
 
@@ -51,6 +51,7 @@ class CrawlerService {
                 List<String> strings = line.tokenize(':').collect {it.trim()}
 
                 String key = transformKey(strings[0])
+                key = key.toLowerCase() 
                 if (strings.size() == 2) {
                     properties[key] = strings[1]
                 } else if (strings.size() == 1) {
@@ -61,8 +62,8 @@ class CrawlerService {
             }
         }
 
-        properties['File'] = file
-        properties['Text'] = text.toString()
+        properties['file'] = file
+        properties['text'] = text.toString()
 
         return properties
 
