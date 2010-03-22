@@ -1,6 +1,5 @@
 @import url(lib/reset.less);
 @import url(lib/lib.less);
-@import url(globals.less);
 
 html {
     font-size: 16px;
@@ -21,10 +20,17 @@ body {
     min-height: 100%;
 
     > header {
+        color: #433;
+        font-weight: bold;
+        font-family: 'Gothic Uralic' ,Verdana, sans-serif;
+        line-height: 1.5em;
         padding: 2em 0 4em;
         height: 9em;
 
-        .console-like-block;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
         img {
             vertical-align: bottom;
@@ -46,8 +52,8 @@ body {
 
     > article {
         font-family: 'Roman Uralic', 'Times New Roman', serif;
-        padding-bottom: 0 3em;
         zoom: 1;
+        padding-bottom: 1em;
 
         > header {
             border-bottom: .125em solid #e84;
@@ -81,11 +87,20 @@ body {
         }
 
         > section {     
-            margin: .5em 0 1em;
+            margin-top: .5em;
     
             p, li, dd {
                 text-align: justify;
                 line-height: 1.5em;
+            }
+
+            dl, ul, ol, blockquote {
+                margin-top: .75em;
+                margin-bottom: .75em;
+            }
+
+            li {
+                margin-left: 1em;
             }
 
             p, blockquote, dl, > ul, > ol {
@@ -125,6 +140,25 @@ body {
 
                 img { float: left; }
             }
+        }
+
+        a { color: #692; }
+
+        a:hover { color: #b72; }
+    }
+
+    > footer {
+        width: 300%;
+        clear: both;
+        margin-left: -100%;
+        margin-right: -100%;
+        overflow: hidden;
+    
+        p {
+            border-top: .15em solid #692;
+            margin-top: 1.35em;
+            margin-bottom: 1em;
+            padding-top: .5em;
         }
     }
 }

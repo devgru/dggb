@@ -20,16 +20,6 @@
     <g:layoutHead/>
 </head>
 <body>
-<header>
-    <a href="/"><img src="/images/tilde.png" alt="~" /></a>
-    <hgroup>
-        <h1><a href="/">сайт Devgru</a></h1>
-        <h2>заметки и всякое такое</h2>
-    </hgroup>
-</header>
 <g:layoutBody/>
-<footer>
-    Строчка текста чтобы понять расположение футера.
-</footer>
 </body>
 </html>
