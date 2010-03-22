@@ -54,13 +54,14 @@ body {
         font-family: 'Roman Uralic', 'Times New Roman', serif;
         zoom: 1;
         padding-bottom: 1em;
+        margin-left: -100%;
+        float: left;
+        width: 200%;
+        clear: both;
 
         > header {
             border-bottom: .125em solid #e84;
 
-            width: 200%;
-            clear: both;
-            margin-left: -100%;
             overflow: hidden;
 
             padding-top: 1em;
@@ -86,17 +87,16 @@ body {
             }
         }
 
-        > section {     
+        > section {
             margin-top: .5em;
-    
+
             p, li, dd {
                 text-align: justify;
                 line-height: 1.5em;
             }
 
             dl, ul, ol, blockquote {
-                margin-top: .75em;
-                margin-bottom: .75em;
+                padding: .75em 0;
             }
 
             li {
@@ -104,8 +104,6 @@ body {
             }
 
             p, blockquote, dl, > ul, > ol {
-                width: 200%;
-                margin-left: -100%;
             }
 
             p:first-letter {
@@ -117,24 +115,24 @@ body {
             }
 
             hr {
-                margin: .625em 0 .75em;
-                background: #e84;
+                margin: .875em 0 .5em;
+                background: #f96;
                 height: .125em;
                 border: 0;
-                width: 200%;
-                margin-left: -100%;
             }
 
             > aside {
                 .text-shadow(0, 0, .1em, #fff);
+                .text-shadow(0, 0, .1em, #fff);
 
                 font: 1.5em/1em 'Linux Libertine' ,'Chancery Uralic';
                 float: right;
-                margin-right: -100%;
+                margin-left: -50%;
                 padding: 0 1em;
-                width: 100%;
+                width: 50%;
                 color: #789;
-                left: 100%;
+                right: -50%;
+                position: relative;
 
                 clear: both;
 
@@ -153,11 +151,11 @@ body {
         margin-left: -100%;
         margin-right: -100%;
         overflow: hidden;
-    
+
         p {
-            border-top: .15em solid #692;
-            margin-top: 1.35em;
-            margin-bottom: 1em;
+            margin-top: .625em;
+            border-top: .125em solid #8af;
+            margin-bottom: .5em;
             padding-top: .5em;
         }
     }

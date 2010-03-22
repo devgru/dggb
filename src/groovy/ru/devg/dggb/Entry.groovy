@@ -19,6 +19,7 @@ class Entry implements Comparable<Entry> {
         String url = file.absolutePath
         File home = (CH.config.dggb.pages.home as File)
         url = url.replace(home.absolutePath, '')
+        if(url == '') url = '/'
         this.url = url
     }
 

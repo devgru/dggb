@@ -36,6 +36,8 @@ class ConsoleTagLib {
         Directory parent = directory.parent
 
         out << "<span class=\"blue\"><a href=\"${directory.url}\">.</a></span> "
+        println directory
+        println parent.url
         out << "<span class=\"blue\"><a href=\"${parent.url}\">..</a></span> "
         children.each {
             if(it instanceof Directory)
@@ -52,13 +54,8 @@ class ConsoleTagLib {
 
         //noinspection GroovyAssignabilityCheck
         Directory directory = entryService.getEntry(url)
-        Set<Entry> children = directory.subdirs
-
-        children.each {
-            if(it instanceof Directory)
-                out << "<li class=\"blue\"><a href=\"${it.url}\">${it.name}</a></li>"
-            else
-                out << "<li><a href=\"${it.url}\">${it.name}</a></li>"
+        directory.subdirs.each {
+            out << "<li class=\"blue\"><a href=\"${it.url}\">${it['title']}</a></li>"
         }
     }
 }
