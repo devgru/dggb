@@ -1,170 +1,148 @@
 @font-face {
     font-family: 'Bookman Uralic';
-    src: url('/fonts/uralic/bookman.eot');
-    src: url('/fonts/uralic/bookman.ttf');
-    src: url('/fonts/uralic/bookman.ttf') format ("truetype");
+    src: url(/fonts/uralic/bookman.eot);
+    src: url(/fonts/uralic/bookman.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Bookman Uralic';
-    src: url('/fonts/uralic/bookman-bold.eot');
-    src: url('/fonts/uralic/bookman-bold.ttf');
-    src: url('/fonts/uralic/bookman-bold.ttf') format ("truetype");
+    src: url(/fonts/uralic/bookman-bold.eot);
+    src: url(/fonts/uralic/bookman-bold.ttf) format('truetype');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Bookman Uralic';
-    src: url('/fonts/uralic/bookman-italic.eot');
-    src: url('/fonts/uralic/bookman-italic.ttf');
-    src: url('/fonts/uralic/bookman-italic.ttf') format ("truetype");
+    src: url(/fonts/uralic/bookman-italic.eot);
+    src: url(/fonts/uralic/bookman-italic.ttf) format('truetype');
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Chancery Uralic';
-    src: url('/fonts/uralic/chancery.eot');
-    src: url('/fonts/uralic/chancery.ttf');
-    src: url('/fonts/uralic/chancery.ttf') format ("truetype");
+    src: url(/fonts/uralic/chancery.eot);
+    src: url(/fonts/uralic/chancery.ttf) format('truetype');
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Gothic Uralic';
-    src: url('/fonts/uralic/gothic.eot');
-    src: url('/fonts/uralic/gothic.ttf');
-    src: url('/fonts/uralic/gothic.ttf') format ("truetype");
+    src: url(/fonts/uralic/gothic.eot);
+    src: url(/fonts/uralic/gothic.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Gothic Uralic';
-    src: url('/fonts/uralic/gothic-bold.eot');
-    src: url('/fonts/uralic/gothic-bold.ttf');
-    src: url('/fonts/uralic/gothic-bold.ttf') format ("truetype");
+    src: url(/fonts/uralic/gothic-bold.eot);
+    src: url(/fonts/uralic/gothic-bold.ttf) format('truetype');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Mono Uralic';
-    src: url('/fonts/uralic/mono.eot');
-    src: url('/fonts/uralic/mono.ttf');
-    src: url('/fonts/uralic/mono.ttf') format ("truetype");
+    src: url(/fonts/uralic/mono.eot);
+    src: url(/fonts/uralic/mono.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Palladio Uralic';
-    src: url('/fonts/uralic/palladio.eot');
-    src: url('/fonts/uralic/palladio.ttf');
-    src: url('/fonts/uralic/palladio.ttf') format ("truetype");
+    src: url(/fonts/uralic/palladio.eot);
+    src: url(/fonts/uralic/palladio.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Palladio Uralic';
-    src: url('/fonts/uralic/palladio-bold.eot');
-    src: url('/fonts/uralic/palladio-bold.ttf');
-    src: url('/fonts/uralic/palladio-bold.ttf') format ("truetype");
+    src: url(/fonts/uralic/palladio-bold.eot);
+    src: url(/fonts/uralic/palladio-bold.ttf) format('truetype');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Palladio Uralic';
-    src: url('/fonts/uralic/palladio-italic.eot');
-    src: url('/fonts/uralic/palladio-italic.ttf');
-    src: url('/fonts/uralic/palladio-italic.ttf') format ("truetype");
+    src: url(/fonts/uralic/palladio-italic.eot);
+    src: url(/fonts/uralic/palladio-italic.ttf) format('truetype');
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Roman Uralic';
-    src: url('/fonts/uralic/roman.eot');
-    src: url('/fonts/uralic/roman.ttf');
-    src: url('/fonts/uralic/roman.ttf') format ("truetype");
+    src: url(/fonts/uralic/roman.eot);
+    src: url(/fonts/uralic/roman.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Roman Uralic';
-    src: url('/fonts/uralic/roman-bold.eot');
-    src: url('/fonts/uralic/roman-bold.ttf');
-    src: url('/fonts/uralic/roman-bold.ttf') format ("truetype");
+    src: url(/fonts/uralic/roman-bold.eot);
+    src: url(/fonts/uralic/roman-bold.ttf) format('truetype');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Roman Uralic';
-    src: url('/fonts/uralic/roman-italic.eot');
-    src: url('/fonts/uralic/roman-italic.ttf');
-    src: url('/fonts/uralic/roman-italic.ttf') format ("truetype");
+    src: url(/fonts/uralic/roman-italic.eot);
+    src: url(/fonts/uralic/roman-italic.ttf) format('truetype');
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Sans Uralic';
-    src: url('/fonts/uralic/sans.eot');
-    src: url('/fonts/uralic/sans.ttf');
-    src: url('/fonts/uralic/sans.ttf') format ("truetype");
+    src: url(/fonts/uralic/sans.eot);
+    src: url(/fonts/uralic/sans.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Sans Uralic';
-    src: url('/fonts/uralic/sans-bold.eot');
-    src: url('/fonts/uralic/sans-bold.ttf');
-    src: url('/fonts/uralic/sans-bold.ttf') format ("truetype");
+    src: url(/fonts/uralic/sans-bold.eot);
+    src: url(/fonts/uralic/sans-bold.ttf) format('truetype');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Sans Uralic';
-    src: url('/fonts/uralic/sans-italic.eot');
-    src: url('/fonts/uralic/sans-italic.ttf');
-    src: url('/fonts/uralic/sans-italic.ttf') format ("truetype");
+    src: url(/fonts/uralic/sans-italic.eot);
+    src: url(/fonts/uralic/sans-italic.ttf) format('truetype');
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Sans Uralic';
-    src: url('/fonts/uralic/sans-bold-italic.eot');
-    src: url('/fonts/uralic/sans-bold-italic.ttf');
-    src: url('/fonts/uralic/sans-bold-italic.ttf') format ("truetype");
+    src: url(/fonts/uralic/sans-bold-italic.eot);
+    src: url(/fonts/uralic/sans-bold-italic.ttf) format('truetype');
     font-style: italic;
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Sans Condensed Uralic';
-    src: url('/fonts/uralic/sans-condensed.eot');
-    src: url('/fonts/uralic/sans-condensed.ttf');
-    src: url('/fonts/uralic/sans-condensed.ttf') format ("truetype");
+    src: url(/fonts/uralic/sans-condensed.eot);
+    src: url(/fonts/uralic/sans-condensed.ttf) format('truetype');
 }
 
 
 @font-face {
     font-family: 'Sans Condensed Uralic';
-    src: url('/fonts/uralic/sans-condensed-bold.eot');
-    src: url('/fonts/uralic/sans-condensed-bold.ttf');
-    src: url('/fonts/uralic/sans-condensed-bold.ttf') format ("truetype");
+    src: url(/fonts/uralic/sans-condensed-bold.eot);
+    src: url(/fonts/uralic/sans-condensed-bold.ttf) format('truetype');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'School Uralic';
-    src: url('/fonts/uralic/school.eot');
-    src: url('/fonts/uralic/school.ttf');
-    src: url('/fonts/uralic/school.ttf') format ("truetype");
+    src: url(/fonts/uralic/school.eot);
+    src: url(/fonts/uralic/school.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'School Uralic';
-    src: url('/fonts/uralic/school-bold.eot');
-    src: url('/fonts/uralic/school-bold.ttf');
-    src: url('/fonts/uralic/school-bold.ttf') format ("truetype");
+    src: url(/fonts/uralic/school-bold.eot);
+    src: url(/fonts/uralic/school-bold.ttf) format('truetype');
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'School Uralic';
-    src: url('/fonts/uralic/school-italic.eot');
-    src: url('/fonts/uralic/school-italic.ttf');
-    src: url('/fonts/uralic/school-italic.ttf') format ("truetype");
+    src: url(/fonts/uralic/school-italic.eot);
+    src: url(/fonts/uralic/school-italic.ttf) format('truetype');
     font-style: italic;
 }
 
