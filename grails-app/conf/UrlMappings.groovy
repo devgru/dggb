@@ -1,8 +1,9 @@
 class UrlMappings {
-    static excludes = ["/images/*", "/css/*", "/fonts/*", "/WEB-INF/*", "js/*"]
+    static excludes = ["/images/*", "/css/*", "/fonts/*", "/WEB-INF/*", "/js/*"]
 
     static mappings = {
 
+        "/rss"(action: 'index', controller: 'rss')
         "/$page**"(action: 'index', controller: 'main')
 
         "/"(view: '/index')

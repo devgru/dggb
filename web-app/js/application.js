@@ -11,3 +11,7 @@ if (Ajax && (Ajax != null)) {
 	  }
 	});
 }
+
+$(document).ready(function () {
+    if(DD_belatedPNG !== null) DD_belatedPNG.fix('body header a img');
+});

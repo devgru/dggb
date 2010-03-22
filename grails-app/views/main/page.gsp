@@ -1,15 +1,17 @@
 <html>
 <head>
+    <title>/home/devgru${url}</title>
     <meta name="layout" content="main"/>
 </head>
 <body>
-<header id="main-header">
+<header>
+    <a href="/"><img src="/images/tilde.png" alt="~" /></a>
     <hgroup>
-        <h1>/home/devgru/</h1>
-        <h2>А ещё у меня есть <a class="blue" href="/v.html">визитка</a>, <a class="blue" href="#">блог</a>, <a class="blue" href="/cv.html">портфолио</a>, <a class="blue" href="/biography">биография</a> и много чего ещё.</h2>
+        <h1>сайт Devgru</h1>
+        <h2>заметки и всякое такое</h2>
     </hgroup>
 </header>
-<article class="hentry article-block">
+<article class="hentry">
     <dggb:entry/>
 </article>
 </body>

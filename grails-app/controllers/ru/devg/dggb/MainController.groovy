@@ -8,8 +8,10 @@ class MainController {
     def entryService
     def urlService
 
+    def url
+
     def index = {
-        def url = urlService.getUrl()
+        url = urlService.getUrl()
         entry = entryService.getEntry(url)
 
         if (entry instanceof Directory) {

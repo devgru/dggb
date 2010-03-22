@@ -45,4 +45,20 @@ class ConsoleTagLib {
         }
 
     }
+
+    def listDirectory = {
+        attrs ->
+        String url = urlService.getUrl(attrs)
+
+        //noinspection GroovyAssignabilityCheck
+        Directory directory = entryService.getEntry(url)
+        Set<Entry> children = directory.subdirs
+
+        children.each {
+            if(it instanceof Directory)
+                out << "<li class=\"blue\"><a href=\"${it.url}\">${it.name}</a></li>"
+            else
+                out << "<li><a href=\"${it.url}\">${it.name}</a></li>"
+        }
+    }
 }

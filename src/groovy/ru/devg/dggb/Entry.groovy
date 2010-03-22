@@ -38,4 +38,10 @@ class Entry implements Comparable<Entry> {
         return name.hashCode()
     }
 
+    String getText() {
+        return properties['text']
+    }
+
+    String getAt(String key) { properties[key] }
+
 }

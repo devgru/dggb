@@ -16,8 +16,8 @@ class Directory extends Entry {
     }
 
     String toString() {
-        return super.toString() +
-                "{\n$children\n}"
+        def names = children.each { it.file.name}
+        return super.toString()//    + names
     }
 
     Set<Entry> getChildren() {

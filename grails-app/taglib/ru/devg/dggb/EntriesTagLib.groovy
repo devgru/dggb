@@ -20,6 +20,5 @@ class EntriesTagLib {
         out << '<span><a href="/">~</a>/' << links.join('/') << '</span>'
         out << "</header><section>${entry.properties.text}</section>"
 
-
     }
 }

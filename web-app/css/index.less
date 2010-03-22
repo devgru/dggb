@@ -1,0 +1,84 @@
+#tilde {
+    margin-left: -100%;
+    width: 200%;
+    float: left;
+
+    * {
+        float: right;
+    }
+
+    p {
+        float: right;
+        width: 50%;
+    }
+}
+
+#iam {
+    margin-right: -100%;
+    width: 100%;
+    float: right;
+}
+
+
+body {
+    > article.left {
+        float: left;
+        margin-left: -100%;
+        width: 100%;
+        clear: left;
+
+        > header {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        > section {
+            p, blockquote, dl, > ul, > ol {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    > article.center {
+        float: left;
+        margin-left: 0;
+        width: 100%;
+
+        > header {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        p, blockquote, dl, > ul, > ol {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    > article.right {
+        float: right;
+        margin-right: -100%;
+        width: 100%;
+        clear: right;
+
+        > header {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        > section {
+            p, blockquote, dl, > ul, > ol {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            > aside {
+                float: left;
+                margin-left: -100%;
+                margin-rigth: 0;
+            }
+
+        }
+    }
+}

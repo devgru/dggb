@@ -1,14 +1,10 @@
-@import url('lib/reset.less');
-@import url('lib/lib.less');
-@import url('globals.less');
-
-/*aside, */ header, footer {
-    overflow: hidden;
-}
+@import url(lib/reset.less);
+@import url(lib/lib.less);
+@import url(globals.less);
 
 html {
     font-size: 16px;
-    background: #eee url(/images/m.png) center top repeat;
+    background: #eee url(/images/m.png) center -1px repeat;
     height: 100%;
     font-family: Georgia, serif;
 }
@@ -19,40 +15,56 @@ html {
 }
 
 body {
-    max-width: 51em;
+    width: 32%;
+    max-width: 20em;
     margin: 0 auto;
     min-height: 100%;
 
     > header {
+        padding: 2em 0 4em;
+        height: 9em;
+
         .console-like-block;
 
-        padding-bottom: 0.5em;
+        img {
+            vertical-align: bottom;
+            float: left;
+            margin-left: -100%;
+        }
 
-        > hgroup {
-            padding-bottom: .25em;
+        hgroup {
+            margin-left: 1.5em;
+        }
 
-            h1 {
-                font-size: 4em;
-                padding-top: .25em;
-                padding-bottom: .075em;
-                line-height: 1em;
-            }
+        h1 {
+            float: left;
+            font-size: 4em;
+            line-height: 1em;
+            width: 200%;
         }
     }
 
     > article {
         font-family: 'Roman Uralic', 'Times New Roman', serif;
-        padding: 1.5em 0 3em;
+        padding-bottom: 0 3em;
+        zoom: 1;
 
         > header {
-            padding: 0 1em;
-            border-bottom: .15em solid #e83;
+            border-bottom: .125em solid #e84;
+
+            width: 200%;
+            clear: both;
+            margin-left: -100%;
+            overflow: hidden;
+
+            padding-top: 1em;
 
             h1 {
                 font: normal normal 2.5em/1em 'School Uralic', serif;
                 padding: .1em 0 .05em;
-                color: #621;
+                color: #433;
                 float: left;
+                line-height: 1.2em;
             }
 
             span {
@@ -63,31 +75,55 @@ body {
                     text-decoration: none;
                 }
                 a:hover {
-                    color: #333;
+                    color: #57f;
                 }
             }
         }
 
-        > section {
-            width: 60%;
-            margin: .75em 1em .75em;
+        > section {     
+            margin: .5em 0 1em;
     
             p, li, dd {
                 text-align: justify;
                 line-height: 1.5em;
             }
 
-            p + p:first-letter {
-                margin-left: 1em;            
+            p, blockquote, dl, > ul, > ol {
+                width: 200%;
+                margin-left: -100%;
+            }
+
+            p:first-letter {
+                margin-left: 1em;
+            }
+
+            p:first-of-type:first-letter {
+                margin-left: 0;
+            }
+
+            hr {
+                margin: .625em 0 .75em;
+                background: #e84;
+                height: .125em;
+                border: 0;
+                width: 200%;
+                margin-left: -100%;
             }
 
             > aside {
-                font: italic 1.5em 'Chancery Uralic';
-                float: right;
-                margin-right: -60%;
-                width: 55%;
-                color: #789;
                 .text-shadow(0, 0, .1em, #fff);
+
+                font: 1.5em/1em 'Linux Libertine' ,'Chancery Uralic';
+                float: right;
+                margin-right: -100%;
+                padding: 0 1em;
+                width: 100%;
+                color: #789;
+                left: 100%;
+
+                clear: both;
+
+                img { float: left; }
             }
         }
     }
