@@ -78,10 +78,10 @@ log4j = {
             'org.hibernate',
             'net.sf.ehcache.hibernate'
 
-    warn 'org.mortbay.log'
+    warn 'grails.app.task', //quartz
+            'org.mortbay.log'
 
-    trace 'grails.app.task', //quartz
-            'grails.app.service',
+    trace 'grails.app.service',
             'grails.app.controller'
 
     appenders {

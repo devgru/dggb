@@ -1,12 +1,11 @@
 package ru.devg.dggb
 
-import com.sun.syndication.feed.synd.SyndContentImpl
 import java.text.SimpleDateFormat
 
 class RssController {
 
     def index = {
-        List<Entry> entries = EntryService.currentStorage.entries.values().grep { it.properties.date != null};
+        def entries = EntryService.currentStorage.entries.values().grep { it['date'] };
 
         render(feedType: "rss") {
             title = "/home/devgru/"
