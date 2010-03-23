@@ -29,7 +29,7 @@
 </header>
 <g:layoutBody/>
 <footer>
-    <p>Строчка текста чтобы понять расположение футера.</p>
+    <p>Копирайт и всё такое. 2009&thinsp;&ndash;&thinsp;2010</p>
 </footer>
 </body>
 </html>
