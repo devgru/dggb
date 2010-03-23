@@ -51,10 +51,13 @@ class EntriesTagLib {
         Set<Entry> children = directory.children
         Directory parent = directory.parent
 
-        out << "<a href=\"${parent.url}\">на уровень выше</a>"
+
+        out << '<article><header><h1>Директория ' << directory['title'] << '</h1></header>'
+        out << '<section><ul>' << "<li><a href=\"${parent.url}\">(вернуться на уровень выше)</a></li>"
         children.each {
-            out << "<a href=\"${it.url}\">${it['title']}</a>"
+            out << "<li><a href=\"${it.url}\">${it['title']}</a></li>"
         }
+        out << '</ul></section> </article>'
     }
 
     def listDirectory = {

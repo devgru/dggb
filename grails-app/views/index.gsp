@@ -41,7 +41,7 @@
     <section>
         <aside>
             <ul>
-                <dggb:listDirectory />
+                %{--<dggb:listDirectory />--}%
             </ul>
         </aside>
         <p>Хочу сказать честно: блога у меня больше нет.</p>
