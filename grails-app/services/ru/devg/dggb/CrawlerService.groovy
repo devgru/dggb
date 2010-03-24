@@ -79,6 +79,8 @@ class CrawlerService {
                 return 'Draft'
             case 'Теги':
                 return 'Tags'
+            case 'Произвольная разметка':
+                return 'Custom layout'
             default:
                 return key
         }
