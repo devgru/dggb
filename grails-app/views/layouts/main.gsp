@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title><g:layoutTitle default="/home/devgru/"/></title>
     <link rel="stylesheet" href="/css/main.css"/>
     <link rel="stylesheet" href="/css/linux-fonts.css"/>
