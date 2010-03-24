@@ -75,20 +75,31 @@ body {
             }
 
             span {
-                color: #ccc;
+                color: #bbb;
                 font-family: 'Gothic Uralic', Verdana, sans-serif;
-                a {
-                    color: #ccc;
+                a:link, a:visited {
+                    color: #bbb;
                     text-decoration: none;
                 }
                 a:hover {
                     color: #57f;
                 }
             }
+
+            aside {
+                float: right;
+                color: #bbb;
+            }
         }
 
         > section {
             margin-top: .5em;
+
+            h2 {
+                padding: .75em 0 .25em;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
 
             p, li, dd {
                 text-align: justify;
@@ -96,7 +107,7 @@ body {
             }
 
             dl, ul, ol, blockquote {
-                padding: .75em 0;
+                padding: .5em 0 1em;
             }
 
             li {
@@ -106,11 +117,19 @@ body {
             p, blockquote, dl, > ul, > ol {
             }
 
+            dt {
+                padding: .3em 0 .2em;
+            }
+
+            dd {
+                padding-left: 1em;
+            }
+
             p:first-letter {
                 margin-left: 1em;
             }
 
-            p:first-of-type:first-letter {
+            p:first-of-type:first-letter, hr + p:first-letter, h2 + p:first-letter {
                 margin-left: 0;
             }
 
@@ -122,7 +141,6 @@ body {
             }
 
             > aside {
-                .text-shadow(0, 0, .1em, #fff);
                 .text-shadow(0, 0, .1em, #fff);
 
                 font: 1.5em/1em 'Linux Libertine' ,'Chancery Uralic', cursive;
@@ -140,9 +158,72 @@ body {
             }
         }
 
-        a { color: #692; }
-
+        /* LoVe/HAte */
+        a:link { color: #692; }
+        a:visited { color: #574; }
         a:hover { color: #b72; }
+        a:active { color: #e40; }
+    }
+
+    > article.left {
+        float: left;
+        margin-left: -100%;
+        width: 100%;
+        clear: left;
+
+        > header {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        > section {
+            p, blockquote, dl, > ul, > ol {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    > article.center {
+        float: left;
+        margin-left: 0;
+        width: 100%;
+
+        > header {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        p, blockquote, dl, > ul, > ol {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    > article.right {
+        float: right;
+        margin-right: -100%;
+        width: 100%;
+        clear: right;
+
+        > header {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        > section {
+            p, blockquote, dl, > ul, > ol {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            > aside {
+                float: left;
+                margin-left: -100%;
+                margin-rigth: 0;
+            }
+
+        }
     }
 
     > footer {
@@ -160,3 +241,4 @@ body {
         }
     }
 }
+
