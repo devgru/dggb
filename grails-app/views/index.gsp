@@ -2,6 +2,7 @@
 <head>
     <meta name="layout" content="empty"/>
     <link type="text/css" rel="stylesheet" href="/css/index.css" />
+    <meta name='yandex-verification' content='5b113b11dd142ec6' />
 </head>
 <body>
 
