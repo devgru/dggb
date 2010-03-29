@@ -20,7 +20,6 @@ body {
     min-height: 100%;
 
     > header {
-        color: #433;
         font-weight: bold;
         font-family: 'Gothic Uralic', Verdana, sans-serif;
         line-height: 1.5em;
@@ -40,18 +39,18 @@ body {
 
         hgroup {
             margin-left: 1.5em;
-        }
-
-        h1 {
-            float: left;
-            font-size: 4em;
-            line-height: 1em;
             width: 200%;
+
+            h1 {
+                float: left;
+                font-size: 4em;
+                line-height: 1em;
+            }
         }
     }
 
     > article {
-        font-family: 'Times New Roman', 'Roman Uralic', serif;
+        font-family: 'Times New Roman', 'School Uralic', serif;
         zoom: 1;
         padding-bottom: 1em;
         margin-left: -100%;
@@ -60,8 +59,7 @@ body {
         clear: both;
 
         > header {
-            border-bottom: .125em solid #e84;
-
+            border-bottom: .125em solid;
             overflow: hidden;
 
             padding-top: 1em;
@@ -69,27 +67,17 @@ body {
             h1 {
                 font: normal normal 2.5em/1em 'Times New Roman', 'School Uralic', serif;
                 padding: .1em 0 .05em;
-                color: #433;
                 float: left;
                 line-height: 1.2em;
             }
 
-            span {
-                color: #bbb;
+            span, aside {
                 font-family: 'Gothic Uralic', Verdana, sans-serif;
                 a:link, a:visited {
-                    color: #bbb;
                     text-decoration: none;
-                }
-                a:hover {
-                    color: #57f;
                 }
             }
 
-            aside {
-                float: right;
-                color: #bbb;
-            }
         }
 
         > section {
@@ -114,9 +102,6 @@ body {
                 margin-left: 1em;
             }
 
-            p, blockquote, dl, > ul, > ol {
-            }
-
             dt {
                 padding: .3em 0 .2em;
             }
@@ -135,7 +120,6 @@ body {
 
             hr {
                 margin: .875em 0 .5em;
-                background: #f96;
                 height: .125em;
                 border: 0;
             }
@@ -143,12 +127,11 @@ body {
             > aside {
                 .text-shadow(0, 0, .1em, #fff);
 
-                font: 1.5em/1em 'Linux Libertine' ,'Chancery Uralic', cursive;
+                font: italic 1.25em/1.2em 'Linux Libertine' ,'Chancery Uralic', cursive;
                 float: right;
                 margin-left: -50%;
-                padding: 0 1em;
+                padding-left: 1.2em;
                 width: 50%;
-                color: #789;
                 right: -50%;
                 position: relative;
 
@@ -158,11 +141,6 @@ body {
             }
         }
 
-        /* LoVe/HAte */
-        a:link { color: #692; }
-        a:visited { color: #574; }
-        a:hover { color: #b72; }
-        a:active { color: #e40; }
     }
 
     > article.left {
@@ -174,29 +152,21 @@ body {
         > header {
             width: 100%;
             margin-left: 0;
+            margin-right: 0;
         }
 
         > section {
             p, blockquote, dl, > ul, > ol {
                 width: 100%;
                 margin-left: 0;
+                padding-right: 0;
             }
-        }
-    }
-
-    > article.center {
-        float: left;
-        margin-left: 0;
-        width: 100%;
-
-        > header {
-            width: 100%;
-            margin-left: 0;
-        }
-
-        p, blockquote, dl, > ul, > ol {
-            width: 100%;
-            margin-left: 0;
+            > aside {
+                margin-left: -100%;
+                width: 100%;
+                right: -100%;
+                padding: 0 1.2em;
+            }
         }
     }
 
@@ -208,19 +178,23 @@ body {
 
         > header {
             width: 100%;
-            margin-left: 0;
+            margin-right: 0;
         }
 
         > section {
+            margin-right: 0;
+    
             p, blockquote, dl, > ul, > ol {
                 width: 100%;
                 margin-left: 0;
+                padding-right: 0;
             }
 
             > aside {
                 float: left;
-                margin-left: -100%;
-                margin-rigth: 0;
+                margin-left: 0;
+                margin-right: -100%;
+                padding: 0 1.2em;
             }
 
         }
@@ -235,10 +209,11 @@ body {
 
         p {
             margin-top: .625em;
-            border-top: .125em solid #8af;
+            border-top: .125em solid;
             margin-bottom: .5em;
             padding-top: .5em;
         }
     }
 }
 
+@import url(colors.less);

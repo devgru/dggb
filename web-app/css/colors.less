@@ -1,0 +1,42 @@
+@headers-color: #433;
+@span-color: #bbb;
+
+body {
+    > header { color: @headers-color; }
+
+    > article {
+
+        > header {
+            border-bottom-color: #e84;
+
+            h1 { color: @headers-color; }
+
+            span, aside {
+                color: @span-color;
+
+                a:link, a:visited { color: @span-color; }
+                a:hover { color: #57f; }
+            }
+        }
+
+        > section {
+            hr { background: #f96; }
+
+            > aside { color: #789; }
+
+        }
+
+
+        /* LoVe/HAte */
+        a:link { color: #692; }
+        a:visited { color: #574; }
+        a:hover { color: #b72; }
+        a:active { color: #e40; }
+    }
+
+    > footer {
+        color: #777;
+
+        p { border-top-color: #8af; }
+    }
+}
