@@ -4,7 +4,7 @@
     <meta name="layout" content="main"/>
 </head>
 <body>
-<article class="hentry">
+<article>
     <dggb:entry/>
 </article>
 </body>
