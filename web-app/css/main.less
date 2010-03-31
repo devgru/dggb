@@ -3,7 +3,7 @@
 
 html {
     font-size: 16px;
-    background: #eee url(/images/m.png) center -1px repeat;
+    background: white url(/images/m.png) center -1px repeat;
     height: 100%;
     font-family: Georgia, serif;
 }
@@ -38,7 +38,7 @@ body {
         }
 
         hgroup {
-            margin-left: 1.5em;
+            padding-left: 1.5em;
             width: 200%;
 
             h1 {
@@ -55,7 +55,7 @@ body {
         margin-left: -100%;
         float: left;
         width: 200%;
-        clear: both;
+        clear: left;
 
         > header {
             border-bottom: .125em solid;
@@ -142,61 +142,13 @@ body {
 
     }
 
-    > article.left {
-        float: left;
-        margin-left: -100%;
-        width: 100%;
-        clear: left;
-
-        > header {
-            width: 100%;
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        > section {
-            p, blockquote, dl, > ul, > ol {
-                width: 100%;
-                margin-left: 0;
-                padding-right: 0;
-            }
-            > aside {
-                margin-left: -100%;
-                width: 100%;
-                right: -100%;
-                padding: 0 1.2em;
-            }
-        }
-    }
-
     > article.right {
         float: right;
         margin-right: -100%;
         width: 100%;
         clear: right;
+        padding-left: 1.5em;
 
-        > header {
-            width: 100%;
-            margin-right: 0;
-        }
-
-        > section {
-            margin-right: 0;
-    
-            p, blockquote, dl, > ul, > ol {
-                width: 100%;
-                margin-left: 0;
-                padding-right: 0;
-            }
-
-            > aside {
-                float: left;
-                margin-left: 0;
-                margin-right: -100%;
-                padding: 0 1.2em;
-            }
-
-        }
     }
 
     > footer {
