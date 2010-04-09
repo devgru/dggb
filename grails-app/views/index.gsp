@@ -50,7 +50,7 @@
 <article class="right">
     <header><h1>Контакты</h1></header>
     <section>
-        <p>Связаться со мной проще всего <a href="mailto:web@devg.ru">по почте</a> или <a href="xmpp:devgru@jabber.ru">через джаббер</a>.</p>
+        <p>Связаться со мной проще всего <a href="mailto:devgru@mail.ru">по почте</a> или <a href="xmpp:devgru@jabber.ru">через джаббер</a>.</p>
     </section>
 </article>
 
