@@ -2,6 +2,11 @@
 <head>
     <meta name="layout" content="empty"/>
     <meta name='yandex-verification' content='5b113b11dd142ec6' />
+    <link rel="openid.server" href="http://openid.yandex.ru/server/" />
+    <link rel="openid2.provider" href="http://openid.yandex.ru/server/" />
+    <link rel="openid.delegate" href="http://openid.yandex.ru/devgru/" />
+    <link rel="openid2.local_id" href="http://openid.yandex.ru/devgru/" />    
+
 </head>
 <body>
 
