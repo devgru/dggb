@@ -13,6 +13,8 @@ class MainController {
         url = urlService.getUrl()
         entry = entryService.getEntry(url)
 
+        response.setHeader("X-XRDS-Location", "http://openid.yandex.ru/devg-ru/yadis/")
+
         if (entry && entry['custom layout']) {
             render(view: 'empty')
         } else if (entry instanceof Directory) {
