@@ -41,6 +41,13 @@
     </section>
 </article>
 
+<article class="right">
+    <header><h1>Контакты</h1></header>
+    <section>
+        <p>Связаться со мной проще всего <a href="mailto:devgru@mail.ru">по почте</a> или <a href="xmpp:devgru@jabber.ru">через джаббер</a>.</p>
+    </section>
+</article>
+
 <article>
     <header><h1>А где блог?</h1></header>
     <section>
@@ -52,10 +59,14 @@
     </section>
 </article>
 
-<article class="right">
-    <header><h1>Контакты</h1></header>
+<article class="right twi">
+    <header><h1>Твиттер</h1></header>
     <section>
-        <p>Связаться со мной проще всего <a href="mailto:devgru@mail.ru">по почте</a> или <a href="xmpp:devgru@jabber.ru">через джаббер</a>.</p>
+        <ul>
+            <g:each in="${statuses}">
+                <li>${it.text}</li>
+            </g:each>
+        </ul>
     </section>
 </article>
 
