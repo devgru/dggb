@@ -15,7 +15,7 @@ html {
 
 body {
     width: 32%;
-    max-width: 20em;
+    max-width: 21em;
     margin: 0 auto;
     min-height: 100%;
 
@@ -60,7 +60,10 @@ body {
         > header {
             overflow: hidden;
 
-            padding-top: 1.5em;
+            margin-top: 1.5em;
+            margin-left: -.75em;
+            padding-left: .5em;
+            border-left: .25em solid #d83;
 
             h1 {
                 font: normal normal 2.5em/1em 'Times New Roman', 'School Uralic', serif;
@@ -93,12 +96,12 @@ body {
                 line-height: 1.5em;
             }
 
-            dl, ul, ol, blockquote {
+            p + dl, p + ul, p + ol, p + blockquote {
                 padding: .5em 0 1em;
             }
 
-            li {
-                margin-left: 1em;
+            p + ul, p + ol {
+                > li { margin-left: 1em; }
             }
 
             dt {
@@ -164,6 +167,10 @@ body {
             margin-bottom: .5em;
             padding-top: .5em;
         }
+    }
+
+    > article, > footer {
+        background: white;
     }
 }
 
