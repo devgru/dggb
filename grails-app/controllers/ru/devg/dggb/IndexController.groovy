@@ -1,6 +1,6 @@
 package ru.devg.dggb
 
-import twitter4j.Status;
+import twitter4j.Status
 
 class IndexController {
 
@@ -9,7 +9,6 @@ class IndexController {
 
     def index = {
         statuses = twitterService.statuses
-        println statuses
         render(view: '/index')
     }
 }
