@@ -8,7 +8,7 @@ class TwitterService {
     boolean transactional = false
 
     static final Twitter twitter = new Twitter()
-    List<Status> statuses
+    List<Status> statuses = null
 
     void updateStatuses() {
 
