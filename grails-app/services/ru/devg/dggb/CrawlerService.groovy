@@ -37,7 +37,7 @@ class CrawlerService {
 
     static def crawlPropertiesFromFile(File file) {
         StringBuilder text = new StringBuilder()
-        Map<String, String> properties = new HashMap<String, String>()
+        Map<String, String> properties = [:]
         boolean rawText = false
 
         file.eachLine {
@@ -62,8 +62,8 @@ class CrawlerService {
             }
         }
 
-        properties['file'] = file
-        properties['text'] = text.toString()
+        properties.file = file
+        properties.text = text.toString()
 
         return properties
 
