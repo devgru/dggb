@@ -40,7 +40,7 @@ class Entry implements Comparable<Entry> {
     }
 
     String getText() {
-        return properties['text']
+        return properties.text
     }
 
     String getAt(String key) { properties[key] }
