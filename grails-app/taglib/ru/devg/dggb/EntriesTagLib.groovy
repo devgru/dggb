@@ -49,11 +49,9 @@ class EntriesTagLib {
         //noinspection GroovyAssignabilityCheck
         Directory directory = entryService.getEntry(url)
         Set<Entry> children = directory.children
-        Directory parent = directory.parent
 
-
-        out << '<article><header><h1>Директория ' << directory['title'] << '</h1></header>'
-        out << '<section><ul>' << "<li><a href=\"${parent.url}\">(вернуться на уровень выше)</a></li>"
+        out << '<article><header><h1>Список файлов</h1></header>'
+        out << '<section><ul>'
         children.each {
             out << "<li><a href=\"${it.url}\">${it['title']}</a></li>"
         }
