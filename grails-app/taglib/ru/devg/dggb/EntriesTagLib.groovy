@@ -23,7 +23,7 @@ class EntriesTagLib {
         out << "<header><h1>${entry.properties.title}</h1>"
         out << '<span><a href="/">~</a>/' << links.join('/') << '</span>'
         String text = entry.properties.text
-        if(entry['markdown']) text = mp.markdown(text) 
+        if (entry['markdown']) text = mp.markdown(text)
         out << "</header><section>$text</section>"
 
     }
