@@ -29,8 +29,8 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
         // runtime 'mysql:mysql-connector-java:5.1.5'
-        build 'net.homeip.yusuke:twitter4j:2.0.10'
-        build 'org.markdownj:markdownj:0.3.0-1.0.2b4'
+        runtime 'net.homeip.yusuke:twitter4j:2.0.10'
+        runtime 'org.markdownj:markdownj:0.3.0-1.0.2b4'
     }
 
 }
