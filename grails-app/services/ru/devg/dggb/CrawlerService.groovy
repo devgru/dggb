@@ -47,6 +47,7 @@ class CrawlerService {
                 rawText = true;
             } else if (rawText) {
                 text.append line
+                text.append "\n"
             } else {
                 List<String> strings = line.tokenize(':').collect {it.trim()}
 
