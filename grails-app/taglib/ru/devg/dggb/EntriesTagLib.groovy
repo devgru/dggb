@@ -1,10 +1,14 @@
 package ru.devg.dggb
 
+import com.petebevin.markdown.MarkdownProcessor
+
 class EntriesTagLib {
     def namespace = 'dggb'
 
     def entryService
     def urlService
+
+    MarkdownProcessor mp = new MarkdownProcessor();
 
     def entry = {
         attrs ->
@@ -18,7 +22,9 @@ class EntriesTagLib {
 
         out << "<header><h1>${entry.properties.title}</h1>"
         out << '<span><a href="/">~</a>/' << links.join('/') << '</span>'
-        out << "</header><section>${entry.properties.text}</section>"
+        String text = entry.properties.text
+        if(entry['markdown']) text = mp.markdown(text) 
+        out << "</header><section>$text</section>"
 
     }
 
