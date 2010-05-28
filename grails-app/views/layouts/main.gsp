@@ -31,7 +31,7 @@
     <a href="/"><img src="/images/tilde.png" alt="~" /></a>
     <hgroup>
         <h1><a href="/">сайт Devgru</a></h1>
-        <h2>заметки и всякое такое</h2>
+        <h2>с оранжево-зелёной тильдой!</h2>
     </hgroup>
 </header>
 <g:layoutBody/>

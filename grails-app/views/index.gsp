@@ -14,7 +14,7 @@
     <img src="/images/tilde.png" alt="~" />
     <hgroup>
         <h1>сайт Devgru</h1>
-        <h2>заметки и всякое такое</h2>
+        <h2>с оранжево-зелёной тильдой!</h2>
     </hgroup>
 </header>
 
