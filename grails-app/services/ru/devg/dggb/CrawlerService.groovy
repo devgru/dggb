@@ -44,7 +44,10 @@ class CrawlerService {
             String line ->
 
             if (line.empty) {
-                rawText = true;
+                if (rawText)
+                    text.append ("\n")
+                else
+                    rawText = true
             } else if (rawText) {
                 text.append line
                 text.append "\n"
