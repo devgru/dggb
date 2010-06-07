@@ -6,7 +6,6 @@
     <link rel="openid2.provider" href="http://openid.yandex.ru/server/" />
     <link rel="openid.delegate" href="http://openid.yandex.ru/devg-ru/" />
     <link rel="openid2.local_id" href="http://openid.yandex.ru/devg-ru/" />
-
 </head>
 <body>
 
