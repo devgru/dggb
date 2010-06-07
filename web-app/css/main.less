@@ -49,7 +49,7 @@ body {
     }
 
     > article {
-        font-family: 'Times New Roman', 'School Uralic', serif;
+        font-family: serif;
         zoom: 1;
         padding-bottom: 2.5em;
         margin-left: -100%;
@@ -92,12 +92,15 @@ body {
             }
 
             p, li, dd {
-                /*text-align: justify; ааааааааааааааа, меня заставили! */
                 line-height: 1.5em;
             }
 
+            p, p + ul li, p + ol li, dd {
+                padding: 0 0 1.5em;
+            }
+
             p + dl, p + ul, p + ol, p + blockquote, ul ul {
-                padding: .5em 0 1em;
+                padding: 0 0 1.5em;
             }
 
             p + ul, p + ol {
@@ -110,14 +113,6 @@ body {
 
             dd {
                 padding-left: 1em;
-            }
-
-            p:first-letter {
-                margin-left: 1em;
-            }
-
-            p:first-of-type:first-letter, hr + p:first-letter, h2 + p:first-letter, ul + p:first-letter {
-                margin-left: 0;
             }
 
             hr {
