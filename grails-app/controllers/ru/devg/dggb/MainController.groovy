@@ -11,7 +11,7 @@ class MainController {
 
     def index = {
         url = urlService.getUrl()
-        entry = entryService.getEntry(url)
+        entry = entryService.entry
 
         if (entry && entry['custom layout']) {
             render(view: 'empty')

@@ -6,21 +6,11 @@ class UrlService {
 
     boolean transactional = false
 
-    String getRawUrl() {
-        RCH.getRequestAttributes().getRequest().forwardURI
-    }
-
     String getUrl() {
-        return removeTrailingSlash(getRawUrl())
-    }
-    String getUrl(attrs) {
-        String url
-        if(attrs == null || attrs['url'] == null) {
-            url = getRawUrl()
-        } else {
-            url = attrs['url']
-        }
-        return removeTrailingSlash(url)
+        String url = RCH.getRequestAttributes().getRequest().forwardURI
+        url = removeTrailingSlash(url)
+        if (url == '') url = '/'
+        return url
     }
 
     private String removeTrailingSlash(String url) {
