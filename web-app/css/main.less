@@ -91,20 +91,23 @@ body {
                 font-weight: bold;
             }
 
-            p, li, dd {
-                line-height: 1.5em;
-            }
+            p, li, dd { line-height: 1.5em; }
 
-            p, p + ul li, p + ol li, dd {
-                padding: 0 0 1.5em;
-            }
+            p, ul:only-child { padding: .5em 0 1em; }
+
+            aside { padding: .35em 0 1.15em; }
 
             p + dl, p + ul, p + ol, p + blockquote, ul ul {
                 padding: 0 0 1.5em;
             }
 
-            p + ul, p + ol {
-                li { margin-left: 1em; }
+            ul {
+                list-style: disc outside;
+            }
+
+            ul, ol {
+
+                li { margin-left: 1.2em; }
             }
 
             dt {
@@ -137,7 +140,7 @@ body {
                 img { float: left; }
             }
 
-            > *:last-child { margin-bottom: 0; padding-bottom: 0; }
+            > ul:only-child { list-style: none; }
         }
 
     }
