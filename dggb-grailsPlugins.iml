@@ -4,7 +4,7 @@
     <facet type="web" name="GrailsWeb">
       <configuration>
         <webroots>
-          <root url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/feeds-1.5/web-app" relative="/" />
+          <root url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/feeds-1.5/web-app" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -12,17 +12,22 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/feeds-1.5">
-      <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/feeds-1.5/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/feeds-1.5/grails-app/taglib" isTestSource="false" />
+    <content url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/feeds-1.5">
+      <sourceFolder url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/feeds-1.5/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/feeds-1.5/grails-app/taglib" isTestSource="false" />
     </content>
-    <content url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/jetty-1.2-SNAPSHOT">
-      <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/jetty-1.2-SNAPSHOT/src/groovy" isTestSource="false" />
+    <content url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/jetty-1.2-SNAPSHOT">
+      <sourceFolder url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/jetty-1.2-SNAPSHOT/src/groovy" isTestSource="false" />
     </content>
-    <content url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2">
-      <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/src/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/grails-app/services" isTestSource="false" />
+    <content url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/quartz-0.4.2">
+      <sourceFolder url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/quartz-0.4.2/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/quartz-0.4.2/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/quartz-0.4.2/grails-app/services" isTestSource="false" />
+    </content>
+    <content url="file://$USER_HOME_GRAILS$/1.2.1/projects/dggb/plugins/markdown-0.2.1">
+      <sourceFolder url="file://$USER_HOME_GRAILS$/1.2.1/projects/dggb/plugins/markdown-0.2.1/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME_GRAILS$/1.2.1/projects/dggb/plugins/markdown-0.2.1/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME_GRAILS$/1.2.1/projects/dggb/plugins/markdown-0.2.1/grails-app/services" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -30,13 +35,13 @@
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/feeds-1.5/lib" />
-          <root url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/lib" />
+          <root url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/feeds-1.5/lib" />
+          <root url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/quartz-0.4.2/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/feeds-1.5/lib" recursive="false" />
-        <jarDirectory url="file://$MODULE_DIR$/../../.grails/1.2.0/projects/dggb/plugins/quartz-0.4.2/lib" recursive="false" />
+        <jarDirectory url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/feeds-1.5/lib" recursive="false" />
+        <jarDirectory url="file://$USER_HOME_GRAILS$/1.2.0/projects/dggb/plugins/quartz-0.4.2/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>
