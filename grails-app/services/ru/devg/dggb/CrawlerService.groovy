@@ -24,23 +24,22 @@ class CrawlerService {
     }
 
     void crawlDirectory(File directoryFile, Directory parent) {
-        File desc = (directoryFile.getAbsolutePath() + '/desc') as File
+        File desc = (directoryFile.absolutePath + '/desc') as File
         if (!desc.exists()) return
 
         Directory directory = preparing.newDirectory(directoryFile, crawlPropertiesFromFile(desc), parent)
 
         directoryFile.eachFile {
-            if (!it.directory) {
-                if (it.name != "desc" && !it.name.contains('.'))
-                    preparing.newPage it, crawlPropertiesFromFile(it), directory
-            } else if (it.name[0] != '.') {
+            if (it.hidden) return
+            if (it.file && it.name != "desc")
+                preparing.newPage it, crawlPropertiesFromFile(it), directory
+            else if (it.directory)
                 crawlDirectory it, directory
-            }
         }
     }
 
     static final String NEW_LINE = '\n';
-    
+
     static Map<String, String> crawlPropertiesFromFile(File file) {
         StringBuilder text = new StringBuilder()
         Map<String, String> properties = [:]
@@ -60,7 +59,7 @@ class CrawlerService {
                 List<String> strings = line.tokenize(':').collect {it.trim()}
 
                 String key = transformKey(strings[0])
-                key = key.toLowerCase() 
+                key = key.toLowerCase()
                 if (strings.size() == 2)
                     properties[key] = strings[1]
                 else if (strings.size() == 1)
