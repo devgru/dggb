@@ -8,15 +8,13 @@ class UrlService {
 
     String getUrl() {
         String url = RCH.getRequestAttributes().getRequest().forwardURI
-        url = removeTrailingSlash(url)
-        if (url == '') url = '/'
-        return url
+        removeTrailingSlash(url)
     }
 
     private String removeTrailingSlash(String url) {
-        if (url.length() > 0 && url.lastIndexOf('/') == url.length() - 1) {
+        if (url.length() > 1 && url.lastIndexOf('/') == url.length() - 1) {
             url = url.substring(0, url.length() - 1)
         }
-        return url
+        url
     }
 }
