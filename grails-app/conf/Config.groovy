@@ -95,6 +95,7 @@ log4j = {
 environments {
     production {
         dggb.pages.home='/home/devgru/pages'
+        grails.neo4j.storeDir='/home/devgru/neo4j/'
     }
     development {
         dggb.pages.home='pages'
