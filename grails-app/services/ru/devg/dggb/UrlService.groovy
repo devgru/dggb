@@ -12,7 +12,7 @@ class UrlService {
     }
 
     private String removeTrailingSlash(String url) {
-        if (url.length() > 1 && url.lastIndexOf('/') == url.length() - 1) {
+        if (url.length() > 1 && url.endsWith('/')) {
             url = url.substring(0, url.length() - 1)
         }
         url
