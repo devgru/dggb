@@ -10,32 +10,38 @@ class CrawlerService {
 
     static final File pagesHome = CH.config.dggb.pages.home as File
 
-    synchronized def crawl() {
+    synchronized void crawl() {
         preparing = new EntryStorage()
-        crawlDirectory(pagesHome, Directory.root)
-        EntryService.currentStorage = preparing
-        log.trace "crawled ${preparing.entries.size()} entries"
+        try {
+            crawlDirectory pagesHome, Directory.root
+
+            log.trace "crawled ${preparing.entries.size()} entries"
+            EntryService.currentStorage = preparing
+        } catch (Exception e) {
+            log.error "crawling failed"
+        }
         preparing = null
     }
 
-    def crawlDirectory(File directoryFile, Directory parent) {
-        if(directoryFile.name[0] == '.') return
+    void crawlDirectory(File directoryFile, Directory parent) {
         File desc = (directoryFile.getAbsolutePath() + '/desc') as File
+        if (!desc.exists()) return
 
-        def directory = preparing.newDirectory(directoryFile, crawlPropertiesFromFile(desc), parent)
+        Directory directory = preparing.newDirectory(directoryFile, crawlPropertiesFromFile(desc), parent)
 
         directoryFile.eachFile {
-            if (it.isDirectory())
-                crawlDirectory it, directory
-            else
+            if (!it.directory) {
                 if (it.name != "desc" && !it.name.contains('.'))
-                    preparing.newPage(it, crawlPropertiesFromFile(it), directory)
+                    preparing.newPage it, crawlPropertiesFromFile(it), directory
+            } else if (it.name[0] != '.') {
+                crawlDirectory it, directory
+            }
         }
-
-        return directory
     }
 
-    static def crawlPropertiesFromFile(File file) {
+    static final String NEW_LINE = '\n';
+    
+    static Map<String, String> crawlPropertiesFromFile(File file) {
         StringBuilder text = new StringBuilder()
         Map<String, String> properties = [:]
         boolean rawText = false
@@ -45,24 +51,22 @@ class CrawlerService {
 
             if (line.empty) {
                 if (rawText)
-                    text.append ("\n")
+                    text << NEW_LINE
                 else
                     rawText = true
             } else if (rawText) {
-                text.append line
-                text.append "\n"
+                text << line << NEW_LINE
             } else {
                 List<String> strings = line.tokenize(':').collect {it.trim()}
 
                 String key = transformKey(strings[0])
                 key = key.toLowerCase() 
-                if (strings.size() == 2) {
+                if (strings.size() == 2)
                     properties[key] = strings[1]
-                } else if (strings.size() == 1) {
+                else if (strings.size() == 1)
                     properties[key] = true
-                } else {
+                else
                     throw new IllegalArgumentException("something unparseable @ $file: “${line}”");
-                }
             }
         }
 
@@ -73,7 +77,7 @@ class CrawlerService {
 
     }
 
-    static def transformKey(String key) {
+    static String transformKey(String key) {
         switch (key) {
             case 'Заголовок':
                 return 'Title'
