@@ -3,7 +3,7 @@ package ru.devg.dggb
 import org.codehaus.groovy.grails.commons.ConfigurationHolder as CH
 
 class Entry implements Comparable<Entry> {
-    final Map<String, String> properties
+    private final Map<String, String> properties
     final Directory parent
     final File file
     final String url
@@ -37,10 +37,6 @@ class Entry implements Comparable<Entry> {
 
     int hashCode() {
         return name.hashCode()
-    }
-
-    String getText() {
-        return properties.text
     }
 
     String getAt(String key) { properties[key] }
