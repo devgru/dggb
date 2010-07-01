@@ -18,12 +18,11 @@
     <![endif]-->
     <script type="text/javascript" src="/js/jquery/jquery-1.4.1.min.js"></script>
     <script type="text/javascript" src="/js/application.js"></script>
-    <!-- Woopra Code Start -->
+    <script type="text/javascript" src="/js/ga.js"></script>
     <script type="text/javascript" src="//static.woopra.com/js/woopra.v2.js"></script>
     <script type="text/javascript">
     woopraTracker.track();
     </script>
-    <!-- Woopra Code End -->
     <g:layoutHead/>
 </head>
 <body>

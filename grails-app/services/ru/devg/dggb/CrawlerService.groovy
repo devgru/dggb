@@ -21,6 +21,8 @@ class CrawlerService {
             log.error "crawling failed"
         }
         preparing = null
+        System.gc();
+        System.gc();
     }
 
     void crawlDirectory(File directoryFile, Directory parent) {
