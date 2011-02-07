@@ -86,7 +86,7 @@ log4j = {
 
     appenders {
         console name: 'stdout', layout: pattern(conversionPattern: '%c{2} %m%n')
-        'null' name:'stacktrace' 
+        'null' name:'stacktrace'
     }
 
 
@@ -94,7 +94,7 @@ log4j = {
 
 environments {
     production {
-        dggb.pages.home='/home/devgru/pages'
+        dggb.pages.home='/home/devgru/Dropbox/pages'
         grails.neo4j.storeDir='/home/devgru/neo4j/'
     }
     development {
